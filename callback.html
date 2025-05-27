@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting...</title>
+    <meta charset="UTF-8" />
+    <script>
+      window.onload = function () {
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get("code");
+        const error = params.get("error");
+
+        if (code) {
+          window.location.href = `apclubexpo://oauth-callback?code=${code}`;
+        } else if (error) {
+          window.location.href = `apclubexpo://oauth-callback?error=${error}`;
+        } else {
+          document.body.innerText = "Missing authentication parameters.";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to the ApClub app...</p>
+  </body>
+</html>
