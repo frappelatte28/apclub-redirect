@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/callback",
-      "destination": "https://www.xyz.com/callback",
+      "destination": "http://localhost:8081/callback",
       "permanent": false
     }
   ]
