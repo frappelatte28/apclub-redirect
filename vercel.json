@@ -1,5 +1,9 @@
 {
-  "rewrites": [
-    { "source": "/callback", "destination": "/callback.html" }
+  "redirects": [
+    {
+      "source": "/callback",
+      "destination": "https://www.xyz.com/callback",
+      "permanent": false
+    }
   ]
 }
